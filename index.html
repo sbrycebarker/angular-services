@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="en">
+<html ng-app="Marvelapp" lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Marvel</title>
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/styles.css">
 </head>
-<body>
+<body ng-controller="MainCtrl">
 
 <section class="module parallax parallax-1">
     <div class="container">
@@ -22,16 +22,19 @@
 </div>
 
 <div class="hero-wrapper">
-    <div class="hero-card">
-        <h3 class="hero-name"></h3>
+    <div class="hero-card" ng-repeat="avenger in avengersArray">
+        <h3 class="hero-name">{{avenger.name}}</h3>
         <div class="hero-image">
-            <img ng-src=""/>
+            <img ng-src="{{avenger.thumbnail.path +'.'+avenger.thumbnail.extension}}"/>
         </div>
         <h4 class="description">Description</h4>
-        <p class="description-text"></p>
+        <p class="description-text">{{avenger.description}}</p>
     </div>
 </div>
 
-
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+<script src="js\Marvelapp.js"></script>
+<script src="js\MainCtrl.js"></script>
+<script src="js\dataService.js"></script>
 </body>
 </html>

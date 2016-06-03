@@ -19,7 +19,7 @@ Now in your `MainCtrl.js` file, build your controller and name it MainCtrl.
 Add the controller directive in the `index.html` file.
 
 ####Test your app
-Let's make sure things are wired up correctly. 
+Let's make sure things are wired up correctly.
 In your controller, add `$scope.test = 'Hello, Avengers';`.
 Then, through your `index.html` and the `{{ }}` syntax, add the test string and open your app in your browser to make sure things are working.
 
